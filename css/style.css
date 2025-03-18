@@ -1,0 +1,421 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Kanban {
+    height: 65rem;
+    display: flex;
+}
+
+
+
+.main-menu {
+    width: 26.25%;
+    height: 100%;
+    /* background-color: rgb(169, 225, 109); */
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-main-menu {
+    /* background-color: #faef77; */
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+}
+
+.top-main-menu {
+    width: 100%;
+    box-sizing: border-box;
+    /* بوردر و پدینگ را داخل عرض حاب می‌کند */
+}
+
+
+.top-main-menu textarea.input-text {
+    margin-top: 0.5rem;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-label,
+.star {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+
+}
+
+.title-label {
+    padding: 5px 0 15px 6px;
+    letter-spacing: -0.02rem;
+    /* معادل -2% */
+    /*منفی 2 درصد بود جیمینی آن را به پیکسل تبدیل کرد چون درصد قبول نمیکنه*/
+}
+
+.star {
+    color: red;
+}
+
+.input-text {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 9.4rem;
+    /*بعد از پرشدن باکس و پیدا شدن درصد از درصد استفاده کن &&&*/
+    background-color: #F2F4F7;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 400;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    /*تغییر اندازه بسته شد*/
+    /* بوردر و پدینگ را داخل عرض حساب می‌کند */
+    max-width: 100%;
+    /* برای جلوگیری از بیرون زدگی در دستگاه‌های کوچک */
+    /* position: relative; */
+}
+
+.input-text::placeholder {
+    color: #667085;
+    font-family: inherit;
+    /* فونت والد را به ارث می‌برد */
+    font-size: inherit;
+    /* اندازه فونت والد را به ارث می‌برد */
+    font-weight: inherit;
+    /* وزن فونت والد را به ارث می‌برد */
+
+
+}
+
+/* .input-text:focus {
+    border-color: rgb(241, 127, 127);
+    transition: border-color 0.4s ease;
+    outline: none;
+} */
+/*برای زیباسازی تکست اریا هنگام فوکس از کد زیر استفاده شده*/
+
+.input-text:focus {
+    border-color: rgb(246, 210, 210);
+    transition: border-color 0.4s ease, filter 0.4s ease;
+    /* اضافه کردن transition برای filter */
+    outline: none;
+    filter: drop-shadow(0 2px 5px rgba(249, 2, 2, 0.3));
+    /* اضافه کردن drop shadow */
+}
+
+#input-text {
+    width: 70%;
+    height: 3rem;
+    margin-right: 0.4rem;
+}
+
+.Option>*:not(.free) {
+    margin-bottom: 1.5rem;
+}
+
+
+.container>*:not(.free) {
+    margin-bottom: 11.5rem;
+}
+
+
+.checkbox-title {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.checkbox-title,
+.checkbox-container,
+.label-title,
+.radio-title,
+.radio-container,
+.title {
+    /* padding: 12px 10px 8px 6px; در پایین تبدیل به رم شد*/
+    padding: 0.75rem 0.625rem 0.5rem 0.375rem;
+}
+
+.icon-label {
+    margin-left: 0.9rem;
+}
+
+.checkbox-icon {
+    font-size: 1.35rem;
+    /* margin-right: 0.5rem; */
+}
+
+.subtask-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.subtask-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 400;
+    margin: 0.4rem;
+    padding: 0.6rem;
+    border: 1px solid #676768;
+    border-radius: 8px;
+    
+}
+
+.subtask-input:focus {
+    border-color: rgb(241, 127, 127);
+    transition: border-color 0.4s ease;
+    outline: none;
+}
+
+/*می‌توان کلاس خود فونت آسم را برای سلکت استفاده کرد*/
+/* .fa-square-plus {
+    margin-right: 0.5rem;
+} */
+
+
+.checkbox-container,
+.radio-container {
+    display: flex;
+    align-items: center;
+    /*هم سطح کردن متن و چک باکس*/
+    /* margin-bottom: 1rem;
+    ایجاد فاصله بین چک باکس‌ها */
+}
+
+.option-label {
+    margin-left: 0.85rem;
+    color: #667085;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.03rem;
+}
+
+#hello {
+    color: #414141;
+}
+
+.option-select {
+    transform: scale(1.55);
+    /* افزایش اندازه 50% */
+    transform-origin: left;
+    /*مطمئن شوید که چک‌باکس از چپ خود بزرگ یا کوچک می‌شود */
+    /* margin-right: 0.3rem; فاصله بین چک‌باکس و متن */
+    accent-color: #000000;
+    /* تغییر رنگ چک باکس در صورت چک؛ اما در همه مرورگرها پشتیبانی نمیشه*/
+    /*اگر دوست داشتی یک چک باکس شخصی سازی شده درست کن و استایل دلخواه بده*/
+}
+
+.option-select,
+.option-label {
+    cursor: pointer;
+}
+
+.label-icon {
+    font-size: 1.1rem;
+    margin-left: 0.2rem;
+}
+
+
+.tag {
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    margin-left: 0.4rem;
+    border-radius: 6px;
+    line-height: 1.35rem;
+    letter-spacing: -0.02rem;
+    /* معادل -2% */
+
+}
+
+.marketing,
+.business,
+.operation {
+    margin-top: 0.5rem;
+}
+
+.design {
+    color: #A300F4;
+    background-color: #F7D4FF;
+}
+
+.development {
+    color: #12B76A;
+    background-color: #D1FADF;
+}
+
+.product {
+    color: #3D24F6;
+    background-color: #D1FADF;
+}
+
+.marketing {
+    color: #FF1616;
+    background-color: #FFDFDF;
+}
+
+.business {
+    color: #00DBC2;
+    background-color: #D1FAF7;
+}
+
+.operation {
+    color: #EBBC00;
+    background-color: #FAFAD1;
+}
+
+.radio-container .option-label {
+    color: #2B2D31;
+}
+
+.radio-icon {
+    font-size: 1.1rem;
+    margin-left: 0.2rem;
+}
+
+
+.bottom-main-menu {
+    margin-top: 15rem;
+}
+
+.clear-btn {
+    color: #FF1616;
+    background-color: #ffffff;
+    padding: 0.8rem 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.03rem;
+    border-radius: 6px;
+    border: none;
+    border: 1.6px solid #FF1616;
+    /* min-width: ??;   
+    min-height: ??;   */
+    box-sizing: border-box;
+}
+
+.create-btn {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0.8rem 4.88rem;
+    margin-left: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.03rem;
+    border-radius: 6px;
+    border: none;
+    border: 1.6px solid #000000;
+
+    /* min-width: ??;   
+    min-height: ??;   */
+    box-sizing: border-box;
+}
+
+/*پایان استایل‌های منوی اصلی */
+
+
+.card-section {
+    background-color: #F2F4F7;
+    width: 73.75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-section-container {
+    background-color: #f5f296;
+    width: 94%;
+    height: 80%;
+    margin-top: 2rem;
+}
+
+.todo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -0.12px;
+    padding: 0.5rem 0;
+}
+
+.card {
+    background-color: #FCFCFD;
+    width: 20rem;
+    height: 18.5rem;
+    /* width: 25%;
+    height: 28%; */
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 0.5px 2px 0px #1018284D;
+    box-sizing: border-box;
+    display: flex; /*برای پیشگیری از مشکل Collapsing Margins*/
+    flex-direction: column; /*برای پیشگیری از مشکل Collapsing Margins*/
+   
+    /* دوست داشتی روی این کدها تحقیق کن */
+    /* filter: drop-shadow(0px 2px 18px rgba(0, 0, 0, 0.04)) blur(2px);
+    isolation: isolate;
+    backdrop-filter: blur(2px) brightness(0.8); */
+}
+
+.card-title {
+    color: #2B2D31;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.02rem;
+    
+}
+
+.card-desc {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 150%;
+    letter-spacing: -0.02rem;
+
+
+}
+
+.card .checkbox-container {
+    margin-top: 6rem;
+}
+
+.card-title,
+.card-desc,
+.card .checkbox-container {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+/*تست*/
+/* .element {
+    filter: drop-shadow(0px 2px 18px rgba(0, 0, 0, 0.04)) blur(2px);
+} */
